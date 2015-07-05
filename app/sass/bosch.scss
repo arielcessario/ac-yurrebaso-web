@@ -1,0 +1,291 @@
+@import "compass";
+@import "compass/reset";
+
+
+body {
+  background-color: #eee;
+  color: #000;
+  margin: 0 auto;
+  display: flex;
+  font-family:Arial;
+}
+.flex-column{
+  flex-direction: column;
+  width: 100%;
+}
+.flex-row {
+  flex-direction: row;
+  width: 100%;
+}
+//======================Menu==================================
+.menu {
+  width: 100%;
+  height: 100px;
+  background: #003C6D;
+  color: #fff;
+}
+.nav-menu{
+  //text-align: center;
+  color: #547382;
+  background: #F8F8F8;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;;
+  background-color: #666;
+}
+
+ul .btn {
+  display: none;
+  cursor: pointer;
+}
+
+ul li {
+  float: left;
+}
+
+ul li a {
+  display: block;
+  padding: 15px 0 15px 20px;
+  text-decoration: none;
+  color: #bbb;
+}
+
+ul li a:hover {
+  color: #fff;
+}
+
+@media (max-width: 30em) {
+  ul li {
+    float: none;
+  }
+  ul .btn {
+    display: block;
+  }
+  ul .menu li a {
+    padding: 0px 20px 10px 20px;
+  }
+  ul .menu {
+    display: none;
+  }
+  ul li:hover .menu {
+    display: block;
+  }
+}
+//======================FIN Menu==================================
+//Titulos comunes en cada sección
+.title-section{
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 3.5em;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  @media (max-width: 600px) {
+    font-size: 1.5em;
+    padding-bottom: 15px;
+  }
+}
+//========================SECCIONES===================================
+.slider {
+  //background-color: #000;
+  width: 100%;
+  height: 500px;
+  background: #003C6D;
+  //background: transparent url('../images/slider_01.jpg') no-repeat;
+}
+#slider {
+  //@include center;
+  height: 350px;
+  width: 100%;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-content: stretch;
+  align-items: center;
+
+  @media (max-width: 800px) {
+    margin-left: 0;
+    width: 100% !important;
+    min-width: 100%;
+  }
+  @media (min-width: 801px) {
+    margin-left: calc(50% - 400px);
+  }
+  div {
+    span {
+      font-size: 40px;
+      height: 50px;
+      line-height: 50px;
+      background-color: red;
+      width: 100%;
+      vertical-align: middle;
+      text-align: center;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+
+      margin: auto;
+    }
+  }
+}
+.services {
+  width: 100%;
+  height: 1000px;
+  background-color:#fff;
+
+  @media (max-width: 600px) {
+    height: 0%;
+  }
+}
+.service-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-content: stretch;
+  align-items: flex-start;
+
+  @media (max-width: 600px) {
+    //display: flex;
+    flex-direction: column;
+    //flex-wrap: nowrap;
+    //justify-content: center;
+    align-content: stretch;
+    align-items: center;
+  }
+}
+.service-image{
+  padding-bottom: 20px;
+  span {
+    font-weight: bold;
+    padding-left:20px;
+    font-size: 2.5em;
+  }
+  p{
+    padding-left:20px;
+    font-size: 1em;
+  }
+}
+.image-container{
+  width: 320px;
+  height: 320px;
+  background: #003C6D;
+  margin: 10px;
+}
+.facilities{
+  width: 100%;
+  height: 800px;
+  background-color:#D8D9DA;
+}
+.slider-info {
+  text-align: center;
+
+  .info-title{
+    padding-top: 25px;
+    font-size: 2.5em;
+  }
+  .info-description{
+    padding-top: 20px;
+    font-size: 1em;
+  }
+}
+.contacts{
+  width: 100%;
+  height: 500px;
+  background-color:#555555;
+
+  .contact-info{
+    text-align: center;
+  }
+
+  @media (max-width: 600px) {
+    background-color:#003C6D;
+  }
+}
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-content: stretch;
+  align-items: center;
+  padding-top: 20px;
+
+  @media (max-width: 600px) {
+    input, input[type="password"], input[type="search"], input[type="text"], input[type="mail"], textarea {
+      width: 70%;
+    }
+    input[type="button"], input[type="submit"] {
+      width: 75%;
+    }
+  }
+}
+.about-me{
+  width: 100%;
+  height: 800px;
+  background-color:#D8D9DA;
+}
+.bosch-info{
+  width: 100%;
+  height: 900px;
+  color:#fff;
+  text-align: center;
+  background-color:#1D1D1B;
+  font-size: 1.5em;
+  /*
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-content: stretch;
+  align-items: center;*/
+
+  .bosch-address{
+    padding-top: 25px;
+  }
+  .bosch-address-top{
+    padding-top: 100px;
+  }
+  .mapa{
+    width: 40%;
+    height: 350px;
+    background-color: #fff;
+    margin: 0 auto;
+    margin-top: 30px;
+  }
+}
+.message {
+  font-size: 1em;
+  font-weight: bold;
+  text-align: center;
+  color:#fff;
+}
+.footer{
+  width: 100%;
+  height: 100px;
+  background-color:#4C4C4C;
+
+  @media (max-width: 600px) {
+    background-color:#003C6D;
+  }
+}
+//===============================FIN SECCIONES=====================================
+
+//===================================CONTROLES=====================================
+input, input[type="password"], input[type="search"], input[type="text"], input[type="mail"], textarea {
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px;
+  width: 20%;
+}
+input[type="button"], input[type="submit"] {
+  width: 21%;
+}
+//===============================FIN CONTROLES=====================================

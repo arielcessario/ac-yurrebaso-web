@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" ng-app="myApp" class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>My AngularJS App</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
+  <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">
+  <link rel="stylesheet" href="stylesheets/bosch.css">
+  <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+<body ng-controller="MainCtrl as mainCtrl">
+    <div class="flex-row">
+        <div class="menu">
+            <img src="images/menu.png">
+            <img src="images/logo1.png">
+            <label>Service Oficial</label>
+            <img src="./images/menu2.png">
+            <div class="nav-menu">
+                <ul class="nav">
+                    <li><a class="btn">&#9776;</a>
+                        <ul class="menu">
+                            <li><a href="/">Home</a></li>
+                            <li><a href="/portfolio">Portfolio</a></li>
+                            <li><a href="/contact">Contact</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--Primer Slider después del menú-->
+        <div class="slider">
+            <div class="title-section">Slider 1</div>
+            <div class="gen-container-slider">
+                <div id="slider">
+                    <div id="slider-01" ng-if="mainCtrl.slide == 1">
+                        <img src="./images/slider1.png">
+                    </div>
+                    <div id="slider-02" ng-if="mainCtrl.slide == 2">
+                        <img src="./images/slider2.png">
+                    </div>
+                    <div id="slider-03" ng-if="mainCtrl.slide == 3">
+                        <img src="./images/slider3.png">
+                    </div>
+                    <div id="slider-04" ng-if="mainCtrl.slide == 4">
+                        <img src="./images/slider1.png">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!--Sección Servicios-->
+        <div class="services">
+            <div class="title-section">servicios</div>
+            <div class="service-container">
+                <div class="service-image">
+                    <div class="image-container">
+                        <img src="./images/servicio1.jpg">
+                    </div>
+                    <span>Servicio 1</span>
+                    <p>Texto descriptivo del servicio</p>
+                </div>
+                <div class="service-image">
+                    <div class="image-container">
+                        <img src="./images/servicio1.jpg">
+                    </div>
+                    <span>Servicio 2</span>
+                    <p>Texto descriptivo del servicio</p>
+                </div>
+                <div class="service-image">
+                    <div class="image-container">
+                        <img src="./images/servicio1.jpg">
+                    </div>
+                    <span>Servicio 3</span>
+                    <p>Texto descriptivo del servicio</p>
+                </div>
+            </div>
+            <div class="service-container">
+                <div class="service-image">
+                    <div class="image-container">
+                        <img src="./images/servicio1.jpg">
+                    </div>
+                    <span>Servicio 4</span>
+                    <p>Texto descriptivo del servicio</p>
+                </div>
+                <div class="service-image">
+                    <div class="image-container">
+                        <img src="./images/servicio1.jpg">
+                    </div>
+                    <span>Servicio 5</span>
+                    <p>Texto descriptivo del servicio</p>
+                </div>
+                <div class="service-image">
+                    <div class="image-container">
+                        <img src="./images/servicio1.jpg">
+                    </div>
+                    <span>Servicio 6</span>
+                    <p>Texto descriptivo del servicio</p>
+                </div>
+            </div>
+        </div>
+
+        <!--Sección Infraestructura-->
+        <div class="facilities">
+            <div class="title-section">instalaciones</div>
+            <div class="slider">
+
+            </div>
+            <div class="slider-info">
+                <div class="info-title">Titulo slider</div>
+                <div class="info-description">Descripción del slider</div>
+            </div>
+        </div>
+
+        <!--Sección Contactos-->
+        <div class="contacts">
+            <div class="title-section">Contacto</div>
+            <div class="contact-info">Texto informativo. Esperar a que el cliente pase el texto</div>
+            <div class="contact-container">
+                <input type="email" id="email" name="email" ng-model="mainCtrl.mail" placeholder="Email"/>
+                <input type="text" id="name" name="name" ng-model="mainCtrl.name" placeholder="Nombre"/>
+                <input type="text" id="subject" name="subject" ng-model="mainCtrl.subject" placeholder="Asunto"/>
+                <textarea id="comment" placeholder="Consulta..." rows="4" cols="50">{{mainCtrol.comment}}</textarea>
+                <input type="button" class="" ng-click="mainCtrl.sendMail();" value="ENVIAR"/>
+                <label class="message">{{mainCtrl.message}}</label>
+            </div>
+        </div>
+
+        <!--Sección Quienes Somos-->
+        <div class="about-me">
+            <div class="title-section">instalaciones</div>
+            <div class="slider">
+
+            </div>
+            <div class="slider-info">
+                <div class="info-title">Titulo slider</div>
+                <div class="info-description">Descripción del slider</div>
+            </div>
+        </div>
+
+        <!--Sección con información de Bosch-->
+        <div class="bosch-info">
+            <div class="bosch-address-top">Dirección: Av. de los Constituyentes N° 552</div>
+            <div class="bosch-address">(Ex Ruta 9) Gral. Pacheco.</div>
+            <div class="bosch-address">Tel: 4740-0707 / 4736-1837</div>
+            <div class="bosch-address">Fax: 4736-1422</div>
+            <div class="bosch-address">E-Mail: info@yurrebasodiesel.com.ar</div>
+            <div class="bosch-address">Horario de atención:</div>
+            <div class="bosch-address">Lunes a Viernes de 8 a 18 Hs.</div>
+            <div class="mapa">
+
+            </div>
+            <div class="bosch-address">LEGALES</div>
+        </div>
+
+        <!--Sección Footer-->
+        <div class="footer">
+
+        </div>
+    </div>
+  <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+  <![endif]-->
+
+  
+
+  <!--div>Angular seed app: v<span app-version></span></div-->
+
+  <!-- In production use:
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
+  -->
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
+  <script src="app.js"></script>
+  <script src="components/version/version.js"></script>
+  <script src="components/version/version-directive.js"></script>
+  <script src="components/version/interpolate-filter.js"></script>
+</body>
+</html>
