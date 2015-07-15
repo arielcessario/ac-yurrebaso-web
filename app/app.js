@@ -4,10 +4,11 @@
     // Declare app level module which depends on views, and components
     angular.module('myApp', [
       'ngRoute',
+      'ngAnimate',
       'myApp.version'
     ]).
     config(['$routeProvider', function($routeProvider) {
-      //$routeProvider.otherwise({redirectTo: '/view1'});
+      $routeProvider.otherwise({redirectTo: '/view1'});
     }])
     .controller('MainCtrl', MainCtrl)
     .factory('MainService', MainService);

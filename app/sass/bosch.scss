@@ -20,7 +20,7 @@ body {
 //======================Menu==================================
 .header{
   width: 100%;
-  height: 100px;
+  min-height: 100px;
   background: #003C6D;
   color: #fff;
 }
@@ -39,22 +39,23 @@ body {
 }
 .header-left:nth-child(1){
   order: 0;
-  flex: 1 1 auto;
+  flex: 0 1 auto;
   align-self: auto;
   margin: 0 auto;
 }
 .header-center:nth-child(2){
   order: 0;
-  flex: 0 1 auto;
+  flex: 1 1 auto;
   align-self: auto;
   font-weight:bold;
   text-align:center;
-  width:30%;
+  width:60%;
   margin: auto 0;
+  font-size: 1.5em;
 }
 .header-right:nth-child(3){
   order: 0;
-  flex: 1 1 auto;
+  flex: 0 1 auto;
   align-self: auto;
   margin: 0 auto;
 }
@@ -72,7 +73,7 @@ body {
   text-transform: uppercase;
   font-weight: bold;
   font-size: 3.5em;
-  padding-top: 20px;
+  padding-top: 40px;
   padding-bottom: 20px;
 
   @media (max-width: 600px) {
@@ -87,6 +88,14 @@ body {
   height: 600px;
   background: #003C6D;
   //background: transparent url('../images/slider_01.jpg') no-repeat;
+
+  @media (max-width: 800px) {
+    background-color: #D8D9DA;
+  }
+
+  @media (max-width: 600px) {
+    background-color: #D8D9DA;
+  }
 }
 #slider {
   //@include center;
@@ -119,7 +128,7 @@ body {
     }
   }
   @media (min-width: 801px) {
-    margin-left: calc(50% - 400px);
+    //margin-left: calc(50% - 400px);
   }
   div {
     span {
