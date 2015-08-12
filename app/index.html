@@ -15,7 +15,7 @@
   <link rel="stylesheet" href="stylesheets/responsive_menu.css">
   <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
-<body ng-controller="MainCtrl as mainCtrl">
+<body ng-app="myApp" ng-controller="MainCtrl as mainCtrl">
     <div class="flex-row">
         <div class="header">
             <div class="header-container">
@@ -51,7 +51,7 @@
         <div class="slider">
             <div class="title-section">Slider 1</div>
             <div class="gen-container-slider">
-                <div id="slider">
+                <div id="slider-1">
                     <div id="slider-01" ng-if="mainCtrl.slide == 1">
 
                     </div>
@@ -124,8 +124,8 @@
         <div class="facilities">
             <div class="title-section">instalaciones</div>
             <div class="gen-container-slider">
-                <div id="slider">
-                    <div id="slider-01" ng-if="mainCtrl.slide == 1">
+                <div id="slider-2">
+                    <!--div id="slider-01" ng-if="mainCtrl.slide == 1">
 
                     </div>
                     <div id="slider-02" ng-if="mainCtrl.slide == 2">
@@ -136,7 +136,7 @@
                     </div>
                     <div id="slider-04" ng-if="mainCtrl.slide == 4">
 
-                    </div>
+                    </div-->
                 </div>
             </div>
             <div class="slider-info">
@@ -164,7 +164,7 @@
             <div class="title-section">Quienes Somos</div>
             <div class="gen-container-slider">
                 <div id="slider">
-                    <div id="slider-01" ng-if="mainCtrl.slide == 1">
+                    <!--div id="slider-01" ng-if="mainCtrl.slide == 1">
 
                     </div>
                     <div id="slider-02" ng-if="mainCtrl.slide == 2">
@@ -175,7 +175,7 @@
                     </div>
                     <div id="slider-04" ng-if="mainCtrl.slide == 4">
 
-                    </div>
+                    </div-->
                 </div>
             </div>
             <div class="slider-info">
@@ -226,11 +226,11 @@
   <!-- In production use:
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
   -->
-  <script src="app.js"></script>
-  <script src="bower_components/angular/angular.js"></script>
-  <script src="bower_components/angular-route/angular-route.js"></script>
-  <script src="components/version/version.js"></script>
-  <script src="components/version/version-directive.js"></script>
+  <!--script src="bower_components/angular/angular.min.js"></script>
+  <script src="bower_components/angular-route/angular-route.min.js"></script-->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular-route.min.js"></script>
   <script src="components/version/interpolate-filter.js"></script>
+  <script src="app.js"></script>
 </body>
 </html>
